@@ -69,9 +69,88 @@ header ul {
 header li {
   cursor: pointer;
 }
-
+header {
+  position: absolute; /* sits on top of banner */
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  background: transparent; /* no background, sits on banner */
+  color: white;
+  z-index: 1000;
+}
 /* Logo */
-.logo {
+header .logo {
   font-size: 24px;
   font-weight: bold;
+  margin-right: auto;
+}
+header nav ul {
+   display: flex;
+  justify-content: space-between; /* pushes logo left, menu right */
+  align-items: center;
+  list-style: none;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+header nav ul li {
+  color: #ffffff;
+  font-size: 14px;
+  cursor: pointer;
+}
+header nav ul li:hover {
+  color: #C271FF; /* hover color */
+  transition: color 0.3s ease;
+}
+
+header nav .logo {
+  font-size: 1.8rem;
+  margin-right: auto; /* keeps logo left, pushes others right */
+  margin-left: 0;
+}
+
+/* Banner Section */
+.banner {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+              url("images/banner.jpg") center/cover no-repeat;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  padding: 0 20px;
+}
+
+.banner h1 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.banner p {
+  font-size: 18px;
+  color: #d9d9d9;
+  margin-bottom: 30px;
+}
+
+.cta-btn {
+  background: #C271FF;
+  border: none;
+  padding: 12px 30px;
+  font-size: 1rem;
+  color: white;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.cta-btn:hover {
+  background: #a34fe3;
 }
